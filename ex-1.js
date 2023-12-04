@@ -82,10 +82,10 @@ let orders = [
 ];
 // Start coding here
 let totalPrice = 0;
-function allPrice (allProduct) {
-  for (let i of allProduct) {
-    console.log (i)
-    totalPrice += i.productPrice * i.productQuantity
+function allPrice (totalOrders) {
+  for (let order of totalOrders) {
+    console.log (order)
+    totalPrice += order.productPrice * order.productQuantity
   }
   return totalPrice
 }

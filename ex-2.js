@@ -82,11 +82,11 @@ let orders = [
 ];
 // Start coding here
 let totalPrice = 0;
-function allPrice (allProduct) {
-  for (let i of allProduct) {
-    console.log (i.creditCardType)
-    if (i.creditCardType === "jcb") {  
-      totalPrice += i.productPrice * i.productQuantity
+function allPrice (totalOrders) {
+  for (let order of totalOrders) {
+    console.log (order.creditCardType)
+    if (order.creditCardType === "jcb") {  
+      totalPrice += order.productPrice * order.productQuantity
     }
   }
   return totalPrice

@@ -83,12 +83,12 @@ let orders = [
 // Start coding here
 let totalPrice = 0;
 let id;
-function allPrice (allProduct) {
-  for (let i of allProduct) {
-    console.log (i)
-    if ((i.productPrice * i.productQuantity) > totalPrice) {  
-      totalPrice = i.productPrice * i.productQuantity
-      id = i.id
+function allPrice (totalOrders) {
+  for (let order of totalOrders) {
+    console.log (order)
+    if ((order.productPrice * order.productQuantity) > totalPrice) {  
+      totalPrice = order.productPrice * order.productQuantity
+      id = order.id
     }
   }
   return totalPrice

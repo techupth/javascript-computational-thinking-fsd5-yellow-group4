@@ -83,12 +83,12 @@ let orders = [
 // Start coding here
 let totalPrice = 0;
 let mostProductName;
-function allPrice (allProduct) {
-  for (let i of allProduct) {
-    console.log (i)
-    if (i.productPrice > totalPrice) {  
-      totalPrice = i.productPrice
-      mostProductName = i.productName
+function allPrice (totalOrders) {
+  for (let order of totalOrders) {
+    console.log (order)
+    if (order.productPrice > totalPrice) {  
+      totalPrice = order.productPrice
+      mostProductName = order.productName
     }
   }
   return mostProductName
@@ -98,12 +98,12 @@ console.log(`The most expensive product in orders: ${mostProductName}`)
 
 /*let totalPrice = 0;
 let mostProductName;
-function allPrice (allProduct) {
-  for (let i = 0; i < allProduct.length; i++) {
-    console.log (allProduct[i].productPrice)
-    if (allProduct[i].productPrice > totalPrice) {  
-      totalPrice = allProduct[i].productPrice
-      mostProductName = allProduct[i].productName
+function allPrice (totalOrders) {
+  for (let i = 0; i < totalOrders.length; i++) {
+    console.log (totalOrders[order].productPrice)
+    if (totalOrders[order].productPrice > totalPrice) {  
+      totalPrice = totalOrders[order].productPrice
+      mostProductName = totalOrders[order].productName
     }
   }
   return mostProductName
