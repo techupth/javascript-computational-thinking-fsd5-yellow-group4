@@ -80,5 +80,18 @@ let orders = [
     creditCardType: "visa-electron",
   },
 ];
-
 // Start coding here
+let totalPrice = 0;
+let id;
+function allPrice (allProduct) {
+  for (let i of allProduct) {
+    console.log (i)
+    if ((i.productPrice * i.productQuantity) > totalPrice) {  
+      totalPrice = i.productPrice * i.productQuantity
+      id = i.id
+    }
+  }
+  return totalPrice
+}
+totalPrice = allPrice(orders)
+console.log (`The most expensive order is order id ${id} (${totalPrice})`)

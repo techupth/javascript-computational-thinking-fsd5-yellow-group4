@@ -80,5 +80,14 @@ let orders = [
     creditCardType: "visa-electron",
   },
 ];
-
 // Start coding here
+let totalPrice = 0;
+function allPrice (allProduct) {
+  for (let i of allProduct) {
+    console.log (i)
+    totalPrice += i.productPrice * i.productQuantity
+  }
+  return totalPrice
+}
+totalPrice = allPrice(orders)
+console.log(`Total amount of the orders: ${totalPrice} Baht`)

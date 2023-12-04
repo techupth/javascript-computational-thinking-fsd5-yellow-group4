@@ -80,5 +80,34 @@ let orders = [
     creditCardType: "visa-electron",
   },
 ];
-
 // Start coding here
+let totalPrice = 0;
+let mostProductName;
+function allPrice (allProduct) {
+  for (let i of allProduct) {
+    console.log (i)
+    if (i.productPrice > totalPrice) {  
+      totalPrice = i.productPrice
+      mostProductName = i.productName
+    }
+  }
+  return mostProductName
+}
+mostProductName = allPrice(orders)
+console.log(`The most expensive product in orders: ${mostProductName}`)
+
+/*let totalPrice = 0;
+let mostProductName;
+function allPrice (allProduct) {
+  for (let i = 0; i < allProduct.length; i++) {
+    console.log (allProduct[i].productPrice)
+    if (allProduct[i].productPrice > totalPrice) {  
+      totalPrice = allProduct[i].productPrice
+      mostProductName = allProduct[i].productName
+    }
+  }
+  return mostProductName
+}
+mostProductName = allPrice(orders)
+console.log(`The most expensive product in orders: ${mostProductName}`)
+*/
