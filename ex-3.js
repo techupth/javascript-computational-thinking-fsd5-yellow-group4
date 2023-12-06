@@ -80,5 +80,16 @@ let orders = [
     creditCardType: "visa-electron",
   },
 ];
-
 // Start coding here
+let totalPrice = 0;
+function allPrice (totalOrders) {
+  for (let order of totalOrders) {
+    console.log (order.customerName)
+    if (order.customerName === "Birdie Shepland") {  
+      totalPrice += order.productPrice * order.productQuantity
+    }
+  }
+  return totalPrice
+}
+totalPrice = allPrice(orders)
+console.log(`Total paid amount of Birdie Shepland: ${totalPrice} Baht`)

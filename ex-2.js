@@ -80,5 +80,16 @@ let orders = [
     creditCardType: "visa-electron",
   },
 ];
-
 // Start coding here
+let totalPrice = 0;
+function allPrice (totalOrders) {
+  for (let order of totalOrders) {
+    console.log (order.creditCardType)
+    if (order.creditCardType === "jcb") {  
+      totalPrice += order.productPrice * order.productQuantity
+    }
+  }
+  return totalPrice
+}
+totalPrice = allPrice(orders)
+console.log(`Paid by JCB credit card amount: ${totalPrice} Baht`)
